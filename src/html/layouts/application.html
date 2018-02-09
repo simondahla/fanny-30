@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <title>{% block title %}{{ title }}{% endblock %}</title>
     <link rel="stylesheet" href="stylesheets/app.css">
-    <link href="https://unpkg.com/webkul-micron@1.1.4/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/hwthorn/parallaxify/master/jquery.parallaxify.min.js" type="text/javascript" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js" integrity="sha256-jwgjxc4j6/dE2aVSFNmEYv4W7+PEL4VChy404By79Is=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include "shared/app-icons.html" %}
     {% block head %}{% endblock %}
@@ -13,7 +16,7 @@
   <body>
     {% block content %}{% endblock %}
     {% block javascript %}
-
+      
       <script src="javascripts/app.js"></script>
 
     {% endblock %}

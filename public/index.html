@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="stylesheets/app.css">
-    <link href="https://unpkg.com/webkul-micron@1.1.4/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/hwthorn/parallaxify/master/jquery.parallaxify.min.js" type="text/javascript" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js" integrity="sha256-jwgjxc4j6/dE2aVSFNmEYv4W7+PEL4VChy404By79Is=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Generate using http://realfavicongenerator.net/ -->
 
@@ -15,39 +18,180 @@
   <body>
     
 
-<div layout="row" layout-margin="">
-</div>
 
 
 
 <div id="fullpage">
-  <div class="section">
+  <div class="section" id="welcome">
     <video autoplay muted loop id="crazy-birthday-animal_88">
-    <source data-src="crazy-party-animal_88.mp4" type="video/mp4" />
+      <source data-src="crazy-party-animal_88.mp4" type="video/mp4" />
     </video>
 
-    <div id="clockdiv">
-      <div>
+    <div layout="row" layout-margin="">
+      <div id="clockdiv">
         <span class="days"></span> <small>dagar</small>
-      
         <span class="hours"></span> <small>h</small>
-      
         <span class="minutes"></span> <small>min</small>
-      
         <span class="seconds"></span> <small>s</small>
       </div>
     </div>
-
-    <a class="button" data-micron="jelly" data-micron-bind="true" id="clickMe">Click me!</a>
+    <div layout="row" layout-margin="">
+      <a href="#rsvp" class="button" data-micron="jelly" data-micron-bind="true" id="clickMe">Fingra här!</a>
+    </div>
   </div>
-  <div class="section">
-    <div class="box">Hello</div>
+
+  <div class="section" id="rsvp">
+    <div id="foreground">
+
+      <div layout="row" layout-margin="">
+        <div class="box box-full info-text">
+          <h1>Halloj!</h1>
+          <p>Hej jag heter Fanny Norström och är 29 år gammal. Jag bor i Stockholm. Mina intressen är:</p>
+          <ol>
+            <li>Snus</li>
+            <li>Medicin</li>
+            <li>Djupa vatten t.ex med narvalar i!</li>
+          </ol>
+          <p>
+            Det här är min hemsida. Klicka runt och titta för att läsa mer om mig, mina intressen och husdjur.
+          </p> 
+<!--           <p>
+            <a href="http://facebook.com">Jag fyller 30 typ snart. Kolla här.</a>
+          </p> -->
+
+          <form action="">
+            <p>
+            <label for="">Vad heter du då?</label>
+            <input type="text" name="name" placeholder="Sunshine" required="true">
+            </p>
+
+            <p>
+            <label class="label-radio" for="rsvp-yes"><input name="status" value="yes" id="rsvp-yes" type="radio"> 🎉 Kommer!</label>
+
+            <label class="label-radio" for="rsvp-maybe"><input name="status" value="maybe" id="rsvp-maybe" type="radio"> ❓ Kommer kanske</label>
+
+            <label class="label-radio" for="rsvp-no"><input id="rsvp-no" name="status" value="no" type="radio"> 😭 Kommer inte</label>
+
+            </p>
+
+            <p>
+            <input type="submit" id="rsvp-btn" value="🚀 RSVP 🚀">
+            </p>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div id="background">
+      <div class="star" data-parallaxify-range="300"></div>
+    </div>
+
   </div>
 </div>
+<script>
+$(document).ready(function() {
 
 
     
 
+
+  $('#fullpage').fullpage({
+
+    easing: 'easeInOutCubic',
+    easingcss3: 'ease',
+    // loopBottom: false,
+    // loopTop: false,
+    // loopHorizontal: true,
+    // continuousVertical: false,
+    // continuousHorizontal: false,
+    // scrollHorizontally: false,
+    // interlockedSlides: false,
+    // dragAndMove: false,
+    // offsetSections: false,
+    // resetSliders: false,
+    // fadingEffect: false,
+    // normalScrollElements: '#element1, .element2',
+    // scrollOverflow: false,
+    // scrollOverflowReset: false,
+    // scrollOverflowOptions: null,
+    // touchSensitivity: 15,
+    // normalScrollElementTouchThreshold: 5,
+    // bigSectionsDestination: null,
+
+    // //Accessibility
+    // keyboardScrolling: true,
+    // animateAnchor: true,
+    // recordHistory: true,
+
+    // //Design
+    // controlArrows: true,
+    // verticalCentered: true,
+    // sectionsColor : ['#ccc', '#fff'],
+    // paddingTop: '3em',
+    // paddingBottom: '10px',
+    // fixedElements: '#header, .footer',
+    // responsiveWidth: 0,
+    // responsiveHeight: 0,
+    // responsiveSlides: false,
+    // parallax: false,
+    // parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+    // //Custom selectors
+    // sectionSelector: '.section',
+    // slideSelector: '.slide',
+
+    lazyLoading: true
+
+    // //events
+    // onLeave: function(index, nextIndex, direction){},
+    // afterLoad: function(anchorLink, index){},
+    // afterRender: function(){},
+    // afterResize: function(){},
+    // afterResponsive: function(isResponsive){},
+    // afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  });
+
+  var i,
+      size,
+      color,
+      width = jQuery(window).width(),
+      height = jQuery(window).height();
+
+  for (i = 1; i <= 150; i++) {
+    size = Math.ceil(3*Math.random());
+    $('#background').append('<div class="star" data-parallaxify-range="' + Math.round(100*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
+  }
+
+  for (i = 1; i <= 30; i++) {
+    size = Math.ceil(5*Math.random()) + 2;
+    $('#background').append('<div class="star" data-parallaxify-range="' + Math.round(400*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
+  }
+
+  for (i = 1; i <= 15; i++) {
+    size = Math.ceil(5*Math.random()) + 5;
+    color = 'rgba(' + Math.round(256*Math.random()) + ', ' + Math.round(256*Math.random()) + ', ' + Math.round(256*Math.random()) + ', ' + (Math.round(100*Math.random())/100) + ')';
+    $('#background').append('<div class="star" data-parallaxify-range="' + Math.round(600*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px; background: ' + color + '; box-shadow: 0px 0px 10px ' + color + ';"></div>');
+  }
+
+  $.parallaxify({
+    positionProperty: 'transform',
+    responsive: true,
+    motionType: 'natural',
+    mouseMotionType: 'gaussian',
+    motionAngleX: 80,
+    motionAngleY: 80,
+    alphaFilter: 0.5,
+    adjustBasePosition: true,
+    alphaPosition: 0.025,
+  });
+
+});
+</script>
+
+    
+      
       <script src="javascripts/app.js"></script>
 
     

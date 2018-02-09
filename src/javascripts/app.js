@@ -1,6 +1,7 @@
-import jQuery from 'jquery';
-import micron from 'webkul-micron';
-import 'fullpage.js';
+// import $ from 'jquery';
+// import micron from 'webkul-micron';
+import Noty from 'noty';
+// import 'fullpage.js';
 import './modules'
 
 console.log(`app.js has loaded!`)
@@ -47,87 +48,45 @@ function initializeClock(id, endtime) {
 var deadline = new Date('2018-03-10 19:00');
 initializeClock('clockdiv', deadline);
 
-jQuery(document).ready(function() {
-  jQuery('#fullpage').fullpage({
-    // //Navigation
-    // menu: '#menu',
-    // lockAnchors: false,
-    // anchors:['firstPage', 'secondPage'],
-    // navigation: false,
-    // navigationPosition: 'right',
-    // navigationTooltips: ['firstSlide', 'secondSlide'],
-    // showActiveTooltip: false,
-    // slidesNavigation: false,
-    // slidesNavPosition: 'bottom',
 
-    // //Scrolling
-    // css3: true,
-    // scrollingSpeed: 700,
-    // autoScrolling: true,
-    // fitToSection: true,
-    // fitToSectionDelay: 1000,
-    // scrollBar: false,
-    // easing: 'easeInOutCubic',
-    // easingcss3: 'ease',
-    // loopBottom: false,
-    // loopTop: false,
-    // loopHorizontal: true,
-    // continuousVertical: false,
-    // continuousHorizontal: false,
-    // scrollHorizontally: false,
-    // interlockedSlides: false,
-    // dragAndMove: false,
-    // offsetSections: false,
-    // resetSliders: false,
-    // fadingEffect: false,
-    // normalScrollElements: '#element1, .element2',
-    // scrollOverflow: false,
-    // scrollOverflowReset: false,
-    // scrollOverflowOptions: null,
-    // touchSensitivity: 15,
-    // normalScrollElementTouchThreshold: 5,
-    // bigSectionsDestination: null,
+var options = $('input[name="status"]');
+var n;
 
-    // //Accessibility
-    // keyboardScrolling: true,
-    // animateAnchor: true,
-    // recordHistory: true,
+$('input[name="status"]').on('change', function(){
+  
+  var val = $(this).val();
+  
+  if (val === 'maybe') {
 
-    // //Design
-    // controlArrows: true,
-    // verticalCentered: true,
-    // sectionsColor : ['#ccc', '#fff'],
-    // paddingTop: '3em',
-    // paddingBottom: '10px',
-    // fixedElements: '#header, .footer',
-    // responsiveWidth: 0,
-    // responsiveHeight: 0,
-    // responsiveSlides: false,
-    // parallax: false,
-    // parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+    n = new Noty({
+      // timeout: timeout,
+      theme: 'relax',
+      type: 'error',
+      layout: 'topCenter',
+      text: '😖 Men ta & bestäm dig då för fan!',
+      buttons: [
+        Noty.button('Ja men okej då', 'btn btn-success', function() {
+          $(options[0]).click();
 
-    // //Custom selectors
-    // sectionSelector: '.section',
-    // slideSelector: '.slide',
+          n.close();
+        }),
 
-    lazyLoading: true
+        Noty.button('Eh skitsamma', 'btn btn-error', function() {
+          $(options[2]).click();
 
-    // //events
-    // onLeave: function(index, nextIndex, direction){},
-    // afterLoad: function(anchorLink, index){},
-    // afterRender: function(){},
-    // afterResize: function(){},
-    // afterResponsive: function(isResponsive){},
-    // afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-    // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-  });
+          n.close();
+      })
+      ]
+    }).show();
+
+  } else {
+
+    if (n !== null){
+      n.close();  
+    }
+    
+    
+  }
+
 
 });
-
-
-function myFunc(){
-    micron.getEle("#clickMe").interaction("bounce");
- }
-
-//Call Interaction
-myFunc();
