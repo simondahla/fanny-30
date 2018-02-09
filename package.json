@@ -1,7 +1,7 @@
 {
   "name": "fanny-30",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "public/index.html",
   "license": "MIT",
   "dependencies": {
     "blendid": "^4.4.3",
