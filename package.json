@@ -1,0 +1,19 @@
+{
+  "name": "fanny-30",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "blendid": "^4.4.3",
+    "flipclock": "^0.7.8",
+    "fullpage.js": "^2.9.6",
+    "jquery": "^3.3.1",
+    "modern-normalize": "^0.3.0",
+    "webkul-micron": "^1.1.4"
+  },
+  "scripts": {
+    "start": "yarn run blendid",
+    "server": "yarn run blendid",
+    "build": "yarn run blendid -- build"
+  }
+}

@@ -1,0 +1,41 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+
+<div layout="row" layout-margin="">
+</div>
+
+
+
+<div id="fullpage">
+  <div class="section">
+    <video autoplay muted loop id="crazy-birthday-animal_88">
+    <source data-src="crazy-party-animal_88.mp4" type="video/mp4" />
+    </video>
+
+    <div id="clockdiv">
+      <div>
+        <span class="days"></span> <small>dagar</small>
+      
+        <span class="hours"></span> <small>h</small>
+      
+        <span class="minutes"></span> <small>min</small>
+      
+        <span class="seconds"></span> <small>s</small>
+      </div>
+    </div>
+
+    <a class="button" data-micron="jelly" data-micron-bind="true" id="clickMe">Click me!</a>
+  </div>
+  <div class="section">
+    <div class="box">Hello</div>
+  </div>
+</div>
+
+{% endblock %}

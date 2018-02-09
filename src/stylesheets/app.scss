@@ -1,0 +1,61 @@
+@import 'base/normalize.css';
+@import 'base/fullpage.css';
+// @import 'base/flipclock.css';
+@import "base/mockstrap";
+
+
+body {
+  margin: 0;
+  padding: 0;
+/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+  background: #333;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#crazy-birthday-animal_88 {
+  /*  making the video fullscreen  */
+  position: fixed;
+  left: -100px; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+.section {
+  text-align: center;
+  color: white;
+}
+
+button {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#clockdiv{
+  // font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+#clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  // background: #00BF96;
+  display: inline-block;
+}
+
+#clockdiv div > span{
+  // padding: 15px;
+  border-radius: 3px;
+  // background: #00816A;
+  display: inline-block;
+}
