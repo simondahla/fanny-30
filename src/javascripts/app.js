@@ -4,7 +4,7 @@ import Noty from 'noty';
 // import 'fullpage.js';
 import './modules'
 
-console.log(`app.js has loaded!`)
+// console.log(`app.js has loaded!`)
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());

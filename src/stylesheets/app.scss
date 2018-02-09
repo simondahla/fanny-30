@@ -1,8 +1,5 @@
-@import 'base/normalize.css';
-@import "../../node_modules/noty/src/noty.scss";
-@import "../../node_modules/noty/src/themes/relax.scss";
-@import 'base/fullpage.css';
-// @import 'base/flipclock.css';
+@import "../../node_modules/noty/src/noty";
+@import "../../node_modules/noty/src/themes/relax";
 @import "base/mockstrap";
 
 html {

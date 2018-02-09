@@ -1,96 +1,6 @@
-
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="stylesheets/app.css">
-    <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/hwthorn/parallaxify/master/jquery.parallaxify.min.js" type="text/javascript" charset="utf-8"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js" integrity="sha256-jwgjxc4j6/dE2aVSFNmEYv4W7+PEL4VChy404By79Is=" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Generate using http://realfavicongenerator.net/ -->
-
-
-    
-  </head>
-  <body>
-    
-
-
-
-
-<div id="fullpage">
-  <div class="section" id="welcome">
-    <video autoplay muted loop id="crazy-birthday-animal_88">
-      <source data-src="crazy-party-animal_88.mp4" type="video/mp4" />
-    </video>
-
-    <div layout="row" layout-margin="">
-      <div id="clockdiv">
-        <span class="days"></span> <small>dagar</small>
-        <span class="hours"></span> <small>h</small>
-        <span class="minutes"></span> <small>min</small>
-        <span class="seconds"></span> <small>s</small>
-      </div>
-    </div>
-    <div layout="row" layout-margin="">
-      <a href="#rsvp" class="button" data-micron="jelly" data-micron-bind="true" id="clickMe">Fingra här!</a>
-    </div>
-  </div>
-
-  <div class="section" id="rsvp">
-    <div id="foreground">
-
-      <div layout="row" layout-margin="">
-        <div class="box box-full info-text">
-          <h1>Halloj!</h1>
-          <p>Hej jag heter Fanny Norström och är 29 år gammal. Jag bor i Stockholm. Mina intressen är:</p>
-          <ol>
-            <li>Snus</li>
-            <li>Medicin</li>
-            <li>Djupa vatten t.ex med narvalar i!</li>
-          </ol>
-          <p>
-            Det här är min hemsida. Klicka runt och titta för att läsa mer om mig, mina intressen och husdjur.
-          </p> 
-<!--           <p>
+<!doctype html><html><head><meta charset="utf-8"><title></title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous"><link rel="stylesheet" href="stylesheets/app-6ecee2b8cc.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" integrity="sha256-XBKOt1YmXeD1sNIE/YYchN1fX49k7twbn61yb9/fHNs=" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script><script src="https://cdn.rawgit.com/hwthorn/parallaxify/master/jquery.parallaxify.min.js" type="text/javascript" charset="utf-8"></script><link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet"><script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js" integrity="sha256-jwgjxc4j6/dE2aVSFNmEYv4W7+PEL4VChy404By79Is=" crossorigin="anonymous"></script><meta name="viewport" content="width=device-width,initial-scale=1"><!-- Generate using http://realfavicongenerator.net/ --></head><body><div id="fullpage"><div class="section" id="welcome"><video autoplay muted loop id="crazy-birthday-animal_88"><source data-src="crazy-party-animal_88.mp4" type="video/mp4"></video><div layout="row" layout-margin=""><div id="clockdiv"><span class="days"></span> <small>dagar</small> <span class="hours"></span> <small>h</small> <span class="minutes"></span> <small>min</small> <span class="seconds"></span> <small>s</small></div></div><div layout="row" layout-margin=""><a href="#rsvp" class="button" data-micron="jelly" data-micron-bind="true" id="clickMe">Fingra här!</a></div></div><div class="section" id="rsvp"><div id="foreground"><div layout="row" layout-margin=""><div class="box box-full info-text"><h1>Halloj!</h1><p>Hej jag heter Fanny Norström och är 29 år gammal. Jag bor i Stockholm. Mina intressen är:</p><ol><li>Snus</li><li>Medicin</li><li>Djupa vatten t.ex med narvalar i!</li></ol><p>Det här är min hemsida. Klicka runt och titta för att läsa mer om mig, mina intressen och husdjur.</p><!--           <p>
             <a href="http://facebook.com">Jag fyller 30 typ snart. Kolla här.</a>
-          </p> -->
-
-          <form action="">
-            <p>
-            <label for="">Vad heter du då?</label>
-            <input type="text" name="name" placeholder="Sunshine" required="true">
-            </p>
-
-            <p>
-            <label class="label-radio" for="rsvp-yes"><input name="status" value="yes" id="rsvp-yes" type="radio"> 🎉 Kommer!</label>
-
-            <label class="label-radio" for="rsvp-maybe"><input name="status" value="maybe" id="rsvp-maybe" type="radio"> ❓ Kommer kanske</label>
-
-            <label class="label-radio" for="rsvp-no"><input id="rsvp-no" name="status" value="no" type="radio"> 😭 Kommer inte</label>
-
-            </p>
-
-            <p>
-            <input type="submit" id="rsvp-btn" value="🚀 RSVP 🚀">
-            </p>
-
-          </form>
-        </div>
-      </div>
-
-    </div>
-    <div id="background">
-      <div class="star" data-parallaxify-range="300"></div>
-    </div>
-
-  </div>
-</div>
-<script>
-$(document).ready(function() {
+          </p> --><form action=""><p><label for="">Vad heter du då?</label><input type="text" name="name" placeholder="Sunshine" required="true"></p><p><label class="label-radio" for="rsvp-yes"><input name="status" value="yes" id="rsvp-yes" type="radio"> 🎉 Kommer!</label><label class="label-radio" for="rsvp-maybe"><input name="status" value="maybe" id="rsvp-maybe" type="radio"> ❓ Kommer kanske</label><label class="label-radio" for="rsvp-no"><input id="rsvp-no" name="status" value="no" type="radio"> 😭 Kommer inte</label></p><p><input type="submit" id="rsvp-btn" value="🚀 RSVP 🚀"></p></form></div></div></div><div id="background"><div class="star" data-parallaxify-range="300"></div></div></div></div><script>$(document).ready(function() {
 
 
     
@@ -187,13 +97,4 @@ $(document).ready(function() {
     alphaPosition: 0.025,
   });
 
-});
-</script>
-
-    
-      
-      <script src="javascripts/app.js"></script>
-
-    
-  </body>
-</html>
+});</script><script src="javascripts/app-1cfb69df4229ff888cce.js"></script></body></html>
